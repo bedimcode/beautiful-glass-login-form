@@ -1,0 +1,33 @@
+========== LOGIN ==========
+.login__title
+<span>Welcome</span> Back
+
+.login__description
+Welcome! Please login to continue.
+
+.login__label .login__input - placeholder
+Email
+Enter your email address
+
+Password
+Enter your password
+
+.login__check-label
+Remember me
+
+.login__button
+Log In
+Sign Up
+
+.login__forgot
+Forgot Password?
+
+========== SHOW HIDDEN - PASSWORD ==========
+// Change password to text
+	// Switch to text
+
+	// Add icon
+
+	// Remove icon
+
+	// Change to password
