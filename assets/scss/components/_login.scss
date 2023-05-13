@@ -1,0 +1,150 @@
+/*=============== LOGIN FORM ===============*/
+.login{
+    &__content,
+    &__form,
+    &__inputs{
+        display: grid;
+    }
+    &__content{
+        position: relative;
+        height: 100vh;
+        align-items: center;
+    }
+    &__img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__form{
+        position: relative;
+        background-color: hsla(244, 16%, 92%, .6);
+        border: 2px solid hsla(244, 16%, 92%, .75);
+        margin-inline: 1.5rem;
+        row-gap: 1.25rem;
+        backdrop-filter: blur(20px);
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+    &__title{
+        color: var(--title-color);
+        font-size: var(--h2-font-size);
+        margin-bottom: .5rem;
+
+        & span{
+            color: var(--first-color);
+        }
+    }
+    &__description{
+        font-size: var(--small-font-size);
+    }
+    &__inputs{
+        row-gap: .75rem;
+        margin-bottom: .5rem;
+    }
+    &__label{
+        display: block;
+        color: var(--title-color);
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        margin-bottom: .25rem;
+    }
+    &__input{
+        width: 100%;
+        padding: 14px 12px;
+        border-radius: 6px;
+        border: 2px solid var(--text-color);
+        background-color: hsla(244, 16%, 92%, .6);
+        color: var(--title-color);
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-medium);
+        transition: border .4s;
+
+        &::placeholder{
+            color: var(--text-color);
+        }
+        &:focus,
+        &:valid{
+            border: 2px solid var(--first-color);
+        }
+    }
+    &__box{
+        position: relative;
+
+        & .login__input{
+            padding-right: 36px;
+        }
+    }
+    &__eye{
+        width: max-content;
+        height: max-content;
+        position: absolute;
+        right: .75rem;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        font-size: 1.25rem;
+        cursor: pointer;
+    }
+    &__check{
+        display: flex;
+        column-gap: .5rem;
+        align-items: center;
+
+        &-input{
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border: 2px solid var(--text-color);
+            background-color: hsla(244, 16%, 92%, .2);
+            border-radius: .25rem;
+            
+            &:checked{
+                background: var(--first-color);
+                
+                &::before{
+                    content: '✔';
+                    display: block;
+                    color: #fff;
+                    font-size: .75rem;
+                    transform: translate(1.5px, -2.5px);
+                }
+            }
+        }
+        &-label{
+            font-size: var(--small-font-size);
+        }
+    }
+    &__buttons{
+        display: flex;
+        column-gap: .75rem;
+    }
+    &__button{
+        width: 100%;
+        padding: 14px 2rem;
+        border-radius: 6px;
+        background: linear-gradient(180deg,
+                    var(--first-color),
+                    var(--second-color));
+        color: #fff;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        box-shadow: 0 6px 24px hsla(244, 75%, 48%, .5);
+        margin-bottom: 1rem;
+        cursor: pointer;
+
+        &-ghost{
+            background: hsla(244, 16%, 92%, .6);
+            border: 2px solid var(--first-color);
+            color: var(--first-color);
+            box-shadow: none;
+        }
+    }
+    &__forgot{
+        font-size: var(--smaller-font-size);
+        font-weight: var(--font-semi-bold);
+        color: var(--first-color);
+        text-decoration: none;
+    }
+}

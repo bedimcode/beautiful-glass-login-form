@@ -1,0 +1,80 @@
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 360px){
+    .login__buttons{
+        flex-direction: column;
+    }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px){
+    .login__form{
+        width: 450px;
+        justify-self: center;
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 1064px){
+    .container{
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    
+    .login{
+        &__content{
+            width: 1024px;
+            height: 600px;
+        }
+        &__img{
+            border-radius: 3.5rem;
+            box-shadow: 0 24px 48px hsla(244, 75%, 36%, .45);
+        }
+        &__form{
+            justify-self: flex-end;
+            margin-right: 4.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .login{
+        &__content{
+            height: 700px;
+        }
+        &__form{
+            row-gap: 2rem;
+            padding: 3rem;
+            border-radius: 1.25rem;
+            border: 2.5px solid hsla(244, 16%, 92%, .75);
+        }
+        &__description,
+        &__label,
+        &__button{
+            font-size: var(--normal-font-size);
+        }
+        &__inputs{
+            row-gap: 1.25rem;
+            margin-bottom: .75rem;
+        }
+        &__input{
+            border: 2.5px solid var(--text-color);
+            padding: 1rem;
+            font-size: var(--small-font-size);
+
+            &:focus,
+            &:valid{
+                border: 2.5px solid var(--first-color);
+            }
+        }
+        &__button{
+            padding-block: 1rem;
+            margin-bottom: 1.25rem;
+            
+            &-ghost{
+                border: 2.5px solid var(--first-color);
+            }
+        }
+    }
+}
